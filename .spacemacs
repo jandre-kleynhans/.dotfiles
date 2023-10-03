@@ -39,7 +39,6 @@ This function should only modify configuration layer settings."
      ;; `M-m f e R' (Emacs style) to install them.
      ;; ----------------------------------------------------------------
      ;; auto-completion
-     ;; better-defaults
      emacs-lisp
      git
      helm
@@ -558,6 +557,11 @@ dump."
 
 
 (defun dotspacemacs/user-config ()
+;; org-mode
+;; list org-agenda files
+(with-eval-after-load 'org
+  (setq org-agenda-files (list "c:/Users/The Oaks Collective/Dropbox/org/personal.org"
+                               "c:/Users/The Oaks Collective/Dropbox/org/work.org")))
   "Configuration for user code:
 This function is called at the very end of Spacemacs startup, after layer
 configuration.
