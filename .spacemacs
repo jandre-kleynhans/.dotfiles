@@ -561,7 +561,10 @@ dump."
 ;; list org-agenda files
 (with-eval-after-load 'org
   (setq org-agenda-files (list "c:/Users/The Oaks Collective/Dropbox/org/personal.org"
-                               "c:/Users/The Oaks Collective/Dropbox/org/work.org")))
+                               "c:/Users/The Oaks Collective/Dropbox/org/work.org"))
+  (setq org-refile-targets
+        '((nil :maxlevel . 3)
+          ("c:/Users/The Oaks Collective/Dropbox/org/archive.org" :maxlevel . 3))))
   "Configuration for user code:
 This function is called at the very end of Spacemacs startup, after layer
 configuration.
